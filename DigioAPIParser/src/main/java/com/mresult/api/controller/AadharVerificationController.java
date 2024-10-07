@@ -143,17 +143,20 @@ public class AadharVerificationController {
     }
 
 //--------  API for getting Data by RequestID from Digio API (Like KID241001113112544TFZF7I5DNKQ6JM) --------
+    @CrossOrigin(origins = "http://localhost:3000") // Allow specific frontend origin
     @PostMapping("/kyc-response/{requestId}")
     public ResponseEntity<String> getKYCResponse(@PathVariable("requestId") String requestId) {
         try {
+        	
+        	System.out.println("Inside getKYCResponse");
             // Build the complete API URL
             String url = String.format(DIGIO_API_URL_KYCReponse, requestId);
-
+            System.out.println("Inside getKYCResponse---1");
             // Set up headers with the authorization key
             HttpHeaders headers = new HttpHeaders();
             headers.set("Authorization", AUTH_KEY);
             headers.set("Content-Type", "application/json");
-
+            System.out.println("Inside getKYCResponse--");
             // Create an HttpEntity with the headers
             HttpEntity<String> entity = new HttpEntity<>(headers);
 
@@ -171,18 +174,27 @@ public class AadharVerificationController {
     }
 
 //------ API for Manager Approval or reject 
+    
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/manage-approval/{requestId}")
     public ResponseEntity<String> manageApproval(@PathVariable String requestId, @RequestParam String status) {
-        String url = String.format(DIGIO_API_URL_Manager, requestId);
+       
+    	 System.out.println("manageApproval ____");
+         
+    	String url = String.format(DIGIO_API_URL_Manager, requestId);
 
+        System.out.println("manageApproval --1");
         // Create JSON request body
         String jsonBody = String.format("{ \"status\": \"%s\" }", status);
 
+        System.out.println("manageApproval --2"+ jsonBody);
+        
         // Set headers
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.set("Authorization", "Basic " + AUTH_KEY);
-
+        headers.set("Authorization", AUTH_KEY);
+        System.out.println("manageApproval --4");
+        
         // Create request entity
         HttpEntity<String> requestEntity = new HttpEntity<>(jsonBody, headers);
 
