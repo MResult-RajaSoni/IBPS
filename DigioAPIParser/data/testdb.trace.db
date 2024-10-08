@@ -1,0 +1,31 @@
+2024-10-08 10:40:01.194772+05:30 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from response_data \000d\000a\000d\000aupdate [*]customer_name =  ""Raja Soni"" form response_data  where id = ""KID2410071529288689R3YUO4EMAA7Z6"""; SQL statement:
+select * from response_data 
+
+update customer_name =  "Raja Soni" form response_data  where id = "KID2410071529288689R3YUO4EMAA7Z6" [42000-224]
+2024-10-08 10:40:53.171951+05:30 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from response_data \000d\000a\000d\000aUPDATE [*]response_data \000d\000aSET customer_name = 'Raja Soni' \000d\000aWHERE id = 'KID2410071529288689R3YUO4EMAA7Z6'"; SQL statement:
+select * from response_data 
+
+UPDATE response_data 
+SET customer_name = 'Raja Soni' 
+WHERE id = 'KID2410071529288689R3YUO4EMAA7Z6' [42000-224]
+2024-10-08 10:41:08.634956+05:30 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from response_data \000d\000a\000d\000aUPDATE [*]response_data \000d\000aSET customer_name = 'Raja Soni' \000d\000aWHERE id = 'KID2410071529288689R3YUO4EMAA7Z6'"; SQL statement:
+select * from response_data 
+
+UPDATE response_data 
+SET customer_name = 'Raja Soni' 
+WHERE id = 'KID2410071529288689R3YUO4EMAA7Z6' [42000-224]
+2024-10-08 10:41:10.226568+05:30 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from response_data \000d\000a\000d\000aUPDATE [*]response_data \000d\000aSET customer_name = 'Raja Soni' \000d\000aWHERE id = 'KID2410071529288689R3YUO4EMAA7Z6'"; SQL statement:
+select * from response_data 
+
+UPDATE response_data 
+SET customer_name = 'Raja Soni' 
+WHERE id = 'KID2410071529288689R3YUO4EMAA7Z6' [42000-224]
+2024-10-08 10:42:22.031622+05:30 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from response_data\000d\000a\000d\000a[*]select * from request_data"; SQL statement:
+select * from response_data
+
+select * from request_data [42000-224]
